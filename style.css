@@ -1,0 +1,204 @@
+
+body{
+    font-family: Arial;
+    background-color: #f7f7f7;
+    margin: 0px;
+}
+.alinha-img{
+    display: flex;
+    justify-content: center;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 3.12rem;
+}
+.navegacao a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-top: 1.25rem;
+    border: 3px solid transparent;
+}
+.navegacao a:hover{
+    border: 3px solid red;
+}
+.navegacao{
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+p{
+    font-size: 1.2rem;
+    margin: 0rem;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0px;
+}
+
+h2{
+    margin: 0px;
+}
+h3{
+    margin: 0px;
+}
+.descricao-bike{
+    background-color: white;
+    padding: 1.50rem;
+    display: grid;
+    text-align: right;
+    align-content: center;
+    gap: 1.25rem;
+    justify-items: end;
+    position: relative;
+}
+
+.descricao-bike a{
+    text-decoration: none;
+    color: white;
+    background-color: #ee2211;
+    border-radius: 0.25rem;
+    padding: 0.8rem 1.06rem;
+    display: inline-block;
+    
+}
+.descricao-bike a:hover{
+    background-color: #900;
+}
+
+header{
+    margin-top: 3.12rem;
+}
+
+.especificacoes {
+    padding: 2.5rem;
+    background-color: white;
+}
+.vantagens-item img{
+    align-self: center;
+    grid-column: 1;
+}
+.vantagens-item{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1.5rem;
+    margin-top: 1rem;
+}
+.vantagens-item:hover {
+    border-left: 5px solid red;
+    padding-left: 0.40rem;
+}
+.vantagens-item p{
+    grid-column: 2;
+}
+.vantagens-item:nth-child(odd){
+    background-color: #f7f7f7;
+    padding: 0.6rem;
+}
+footer{
+    background-color: #fff;
+    margin-top: 1.87rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.vantagens{
+    align-self: center;
+    text-align: right;
+    font-size: 3rem;
+    color: #c6c6c6;
+    padding: 2rem;
+    background-image: url("./img/onda.svg");
+}
+.descricao-bike::before{
+    content: "";
+    display: inline-block;
+    background-color: #ee2211;
+    height: 0.25rem;
+    width: 3.12rem;
+    position: absolute;
+    top: 2rem;
+    right: -1.5rem;
+}
+.img-bike img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 600px) {
+    p{
+        font-size: 1.1rem;
+    }
+    .navegacao {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 0.1rem;
+        gap: 0.4rem;
+    }
+    .navegacao a:not(:first-child) {
+        margin-top: 0.5rem;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+        margin-top: 1.7rem;
+    }
+    .descricao-bike::before{
+        display: none;
+    }
+    footer{
+        padding: 1.25rem;
+    }
+    .vantagens{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .descricao-bike{
+        text-align: left;
+        padding: 2rem;
+        justify-items: left;
+    }
+    header{
+        margin-top: 1.5rem;
+    }
+    
+}
+@media (max-width: 1000px) and (min-width: 600px){
+    .especificacoes {
+        grid-row: 3;
+        grid-column: 1/-1;
+    }
+    .vantagens{
+        grid-column: 1/-1;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .descricao-bike::before{
+        top: 1.25rem;
+    }
+    .descricao-bike{
+        text-align: left;
+        padding: 2rem;
+        justify-items: left;
+    }
+}
+@media (max-width: 400px){
+    .vantagens{
+        font-size: 1.30rem;
+    }
+    .especificacoes{
+        padding: 1.25rem;
+    }
+    
+}
