@@ -1,8 +1,26 @@
+:root{
+    --fundo: #f7f7f7;
+    --fundo-conteudo: #fff;
+    --texto: #000;
+    --subtitulo: #c6c6c6;
+    --img-onda: url("./img/onda.svg");
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --fundo: #111;
+        --fundo-conteudo: #000;
+        --texto: #fff;
+        --subtitulo: rgba(255, 255, 255, 0.2);
+        --img-onda: url("./img/onda-escura.svg");
+    }
+} 
 
 body{
     font-family: Arial;
-    background-color: #f7f7f7;
+    background-color: var(--fundo);
     margin: 0px;
+    color: var(--texto);
 }
 .alinha-img{
     display: flex;
@@ -17,8 +35,8 @@ body{
 }
 .navegacao a{
     text-decoration: none;
-    color: black;
-    background-color: white;
+    color: var(--texto);
+    background-color: var(--fundo-conteudo);
     padding: 1rem;
     border-radius: 0.25rem;
     margin-top: 1.25rem;
@@ -55,7 +73,7 @@ h3{
     margin: 0px;
 }
 .descricao-bike{
-    background-color: white;
+    background-color: var(--fundo-conteudo);
     padding: 1.50rem;
     display: grid;
     text-align: right;
@@ -84,7 +102,7 @@ header{
 
 .especificacoes {
     padding: 2.5rem;
-    background-color: white;
+    background-color: var(--fundo-conteudo);
 }
 .vantagens-item img{
     align-self: center;
@@ -95,6 +113,7 @@ header{
     grid-template-columns: auto 1fr;
     gap: 0.5rem 1.5rem;
     margin-top: 1rem;
+    padding: 0.6rem;
 }
 .vantagens-item:hover {
     border-left: 5px solid red;
@@ -104,11 +123,10 @@ header{
     grid-column: 2;
 }
 .vantagens-item:nth-child(odd){
-    background-color: #f7f7f7;
-    padding: 0.6rem;
+    background-color: var(--fundo);
 }
 footer{
-    background-color: #fff;
+    background-color: var(--fundo);
     margin-top: 1.87rem;
     text-align: center;
     padding: 2.5rem;
@@ -118,9 +136,9 @@ footer{
     align-self: center;
     text-align: right;
     font-size: 3rem;
-    color: #c6c6c6;
+    color: var(--subtitulo);
     padding: 2rem;
-    background-image: url("./img/onda.svg");
+    background-image: var(--img-onda);
 }
 .descricao-bike::before{
     content: "";
